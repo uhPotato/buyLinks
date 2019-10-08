@@ -49,6 +49,7 @@ javascript:(function(){
 					{
 						console.log(this.href);
 						console.log(event);
+						return window.location.href;
 					}
 				
 					link.getAttribute('href').click(function (event)
