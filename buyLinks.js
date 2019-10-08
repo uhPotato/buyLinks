@@ -42,12 +42,27 @@ javascript:(function(){
 				var analyticsRegion = link.getAttribute('data-analytics-region');
 				var linkRel = link.rel;
 				var ariaLabel = link.getAttribute('aria-label');
+				
+				var landingLink = $(document).ready(function()
+				{    
+					function someFunction(event)
+					{
+						console.log(this.href);
+						console.log(event);
+					}
+				
+					$(link).click(function (event)
+					{
+						someFunction.apply(this, event);
+					});
+				});
 
+				
 				var arialTd = (ariaLabel != null) ? ariaLabel : "Aria-Label: null".fontcolor('red');
 				var regionTd = (analyticsRegion != null) ? analyticsRegion : "Analytics Region: null".fontcolor('red');
-				var relTd = (linkRel != null) ? linkRel : "Link Rell: null".fontcolor('red');
+				var resultLinkTd = landingLink.URL;
 			
-				tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>' + relTd + '</td><td>' + regionTd + '</td><td>' + arialTd + '</td></tr>';
+				tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>' + resultLinkTd + '</td><td>' + regionTd + '</td><td>' + arialTd + '</td></tr>';
 				
 			}
 	}
