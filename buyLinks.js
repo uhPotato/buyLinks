@@ -36,8 +36,8 @@ javascript:(function(){
 		var link = links[i];
 		
 			if(linkChecker.isNotGlobalNav(link) &&
-				linkChecker.isBuyLink(link) &&
-				linkChecker.isNotGlobalFooter(link)){
+				linkChecker.isNotGlobalFooter(link) &&
+				linkChecker.isBuyLink(link)){
 				
 				var href = link.getAttribute('href');
 				var analyticsRegion = link.getAttribute('data-analytics-region');
