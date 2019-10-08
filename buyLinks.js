@@ -43,7 +43,8 @@ javascript:(function(){
 				var linkRel = link.rel;
 				var ariaLabel = link.getAttribute('aria-label');
 
-				var landingLink = link.click().URL;
+				var landingLink = link.ping;
+				console.log(landingLink);
 				
 				var arialTd = (ariaLabel != null) ? ariaLabel : "Aria-Label: null".fontcolor('red');
 				var regionTd = (analyticsRegion != null) ? analyticsRegion : "Analytics Region: null".fontcolor('red');
