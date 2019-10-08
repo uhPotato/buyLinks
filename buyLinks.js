@@ -12,7 +12,7 @@ javascript:(function(){
 		},
 		isBuyLink: function(l) {
 			if (l.getAttribute('data-analytics-region') != null){
-				return l.getAttribute('href').includes('/shop/goto/product/');
+				return l.getAttribute('href').includes('/shop/goto/');
 				
 			}
 		}
@@ -58,8 +58,6 @@ javascript:(function(){
 	header.innerHTML = docTitle;
 	tblBorder.innerHTML = border;
 	tblContainer.innerHTML = tbl;
-
-	console.log(resultsWindow.document);
 
 	resultsWindow.document.body.innerHTML = '';
 	resultsWindow.document.head.appendChild(tblBorder);
