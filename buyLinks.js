@@ -12,7 +12,7 @@ javascript:(function(){
 		},
 		isBuyLink: function(l) {
 			if (l.getAttribute('class') != null){
-				return l.getAttribute('hrey').includes('/shop/goto/product/') || 
+				return l.getAttribute('href').includes('/shop/goto/product/') || 
 				l.getAttribute('data-analytics-region').includes('buy');
 				
 			}
