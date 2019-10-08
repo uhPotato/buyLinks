@@ -43,7 +43,7 @@ javascript:(function(){
 				var linkRel = link.rel;
 				var ariaLabel = link.getAttribute('aria-label');
 
-				var landingLink = ping(link);
+				var landingLink = link.ping.getAttribute('href');
 				console.log(landingLink);
 				
 				var arialTd = (ariaLabel != null) ? ariaLabel : "Aria-Label: null".fontcolor('red');
