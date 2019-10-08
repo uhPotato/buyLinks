@@ -11,9 +11,8 @@ javascript:(function(){
 			}	
 		},
 		isBuyLink: function(l) {
-			if (l.getAttribute('class') != null){
-				return l.getAttribute('href').includes('/shop/goto/product/') || 
-				l.getAttribute('data-analytics-region').includes('buy');
+			if (l.getAttribute('data-analytics-region') != null){
+				return l.getAttribute('href').includes('/shop/goto/product/');
 				
 			}
 		}
