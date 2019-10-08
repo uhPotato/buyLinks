@@ -43,7 +43,7 @@ javascript:(function(){
 				var linkRel = link.rel;
 				var ariaLabel = link.getAttribute('aria-label');
 				
-				var landingLink = $(document).ready(function()
+				var landingLink = link.ready(function()
 				{    
 					function someFunction(event)
 					{
@@ -51,7 +51,7 @@ javascript:(function(){
 						console.log(event);
 					}
 				
-					$(link).click(function (event)
+					link.getAttribute('href').click(function (event)
 					{
 						someFunction.apply(this, event);
 					});
