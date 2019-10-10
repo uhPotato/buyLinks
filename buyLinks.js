@@ -43,8 +43,12 @@ javascript:(function(){
 				var linkRel = link.rel;
 				var ariaLabel = link.getAttribute('aria-label');
 
-				var landingLink = link.ping.getAttribute('href');
-				console.log(landingLink);
+				$(document).ready(function(){
+					$(".get-url-link").click(function(){
+					  var url = $(this).attr('action');
+					  alert(url);
+					});
+				  });
 				
 				var arialTd = (ariaLabel != null) ? ariaLabel : "Aria-Label: null".fontcolor('red');
 				var regionTd = (analyticsRegion != null) ? analyticsRegion : "Analytics Region: null".fontcolor('red');
